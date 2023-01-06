@@ -10,10 +10,15 @@ function App() {
 
   return (
     <div className={`min-h-screen bg-black text-white`}>
-      <header className={`border text-center`}>
-        <h1 className={`fixed w-full border bg-black p-4`}>Quick Pic ⚡</h1>
+      <header className={``}>
+        <h1
+          className={`fixed w-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 p-4 text-center text-3xl`}
+        >
+          Quick Pic ⚡
+        </h1>
       </header>
-      <main className={`mt-[58px]`}>
+      <hr className={`bg-green-500`} />
+      <main className={`mt-[108px] flex flex-col gap-8`}>
         <Settings
           setPhotoUrl={setPhotoUrl}
           setColor={setColor}
@@ -31,6 +36,15 @@ function App() {
           blur={blur}
         />
       </main>
+      <footer className={`mt-22 p-8 text-center`}>
+        created by{' '}
+        <a
+          className={`text-red-500 hover:text-white`}
+          href='https://0xbn.github.com/'
+        >
+          Brian
+        </a>
+      </footer>
     </div>
   );
 }
